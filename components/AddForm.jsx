@@ -1,3 +1,8 @@
+import Switch from "@material-ui/core/Switch";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Grid from "@material-ui/core/Grid";
+
 export default function AddForm() {
 	return (
 		<form className="mt-2 text-white bg-gray-800 pt-8 pb-2 mx-6 rounded-lg border border-gray-700">
@@ -14,11 +19,11 @@ export default function AddForm() {
 					name="dose"
 					placeholder="Dose"
 					type="text"
-					className="bg-gray-800 rounded-full border border-indigo-400 p-2 w-8/12"
+					className="bg-gray-800 rounded-full border border-indigo-400 p-2 w-7/12"
 				></input>
 				<select
 					name="unit"
-					className="bg-gray-800 rounded-full border border-indigo-400 p-2 w-4/12"
+					className="bg-gray-800 rounded-full border border-indigo-400 p-2 w-5/12"
 				>
 					<option value="" disabled selected>
 						Unit
@@ -48,6 +53,17 @@ export default function AddForm() {
 					<option value="evening">Evening</option>
 					<option value="bedtime">Bedtime</option>
 				</select>
+			</div>
+			<div>
+				<Grid component="label" container alignItems="center" spacing={1}>
+					<Grid item>Hibernate</Grid>
+					<Grid item>
+						<Switch
+							value="checked" // some value you need
+						/>
+					</Grid>
+					<Grid item>Currently Taking</Grid>
+				</Grid>
 			</div>
 			<div className="m-4">
 				<button className=" bg-indigo-600 rounded-full px-6 py-2 w-full">
