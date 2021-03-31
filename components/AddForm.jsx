@@ -56,7 +56,7 @@ export default function AddForm() {
 			</div>
 			<div>
 				<Grid component="label" container alignItems="center" spacing={1}>
-					<Grid item>Hibernate</Grid>
+					<Grid item>Save for later</Grid>
 					<Grid item>
 						<Switch
 							value="checked" // some value you need
